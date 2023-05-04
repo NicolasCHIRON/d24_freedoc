@@ -1,24 +1,43 @@
-# README
+# The Gossip Project
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/as-seen-on-tv.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### THP D24 
 
-* Ruby version
+Learning RoR(Ruby on Rails) and our first database
 
-* System dependencies
 
-* Configuration
+It's like Doctolib... but better !
 
-* Database creation
+* Creating and modeling our models
+* Managing migration to play with our tables
 
-* Database initialization
+## Installation
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* 'Git clone' #cloning this repo
+* `bundle install` #installing the Ruby's gems
 
-* Deployment instructions
 
-* ...
+## Usage
+
+* `rails db:migrate` #put all database tables to up status
+* `rails db:seed` #generating a random database with faker's gem
+* `rails c` #turning on the console
+
+* Do the test `tp City.all `, `tp Patient.all`, `tp Doctor.all`, `tp Appointment.all`, `tp Specialty.all`, `tp CommentLike.all` (or .last)
+
+
+## Authors
+
+- [@gregimbeau](https://github.com/gregimbeau/)
+- [@NicolasCHIRON](https://github.com/NicolasCHIRON/)
+- [@NicolasVADELORGE](https://github.com/NicolasVdev/)
+
+
+## Requirements
+
+Ruby 3.0.0  

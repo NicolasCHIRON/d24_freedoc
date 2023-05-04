@@ -13,7 +13,7 @@ require 'faker'
 end
 
 25.times do
-  Doctor.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city_id: rand(1..15))
+  Doctor.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city_id: City.all.sample.id)
 end
 
 Specialty.create!(name: "généraliste")
@@ -24,14 +24,14 @@ Specialty.create!(name: "Kiné")
 Specialty.create!(name: "ORL")
 
 55.times do
-  Patient.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city_id: rand(1..15))
+  Patient.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, city_id: City.all.sample.id)
 end
 
 25.times do
-  Appointment.create!(date: Faker::Time.between(from: DateTime.now, to: DateTime.now + 5, format: :default), city_id: rand(1..15), doctor_id: rand(1..25), patient_id: rand(1..55))
+  Appointment.create!(date: Faker::Time.between(from: DateTime.now, to: DateTime.now + 5, format: :default), city_id: City.all.sample.id, doctor_id: Doctor.all.sample.id, patient_id: Patient.all.sample.id)
 end
 
 20.times do
-  DoctorSpecialty.create!(doctor_id: rand(1..25), specialty_id: rand(1..6))
+  DoctorSpecialty.create!(doctor_id: Doctor.all.sample.id, specialty_id: Specialty.all.sample.id)
 end
 
